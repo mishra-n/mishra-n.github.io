@@ -18,7 +18,7 @@ a:hover {
     top: 50%;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, -50%) ;
+    transform: translate(-50%, -50%);
     text-align: center;
     max-width: 520px;
     padding: 32px;
@@ -52,4 +52,20 @@ a:hover {
 
 .icons a:hover {
     color: #1565c0;
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: white; /* Optional: to ensure text is readable */
+    }
+
+    .icons a {
+        color: white;
+    }
+
+    .icons a:hover {
+        color: #90caf9;
+    }
 }
