@@ -66,6 +66,17 @@ a:hover {
     color: #1565c0;
 }
 
+/* SciX mark (not in Academicons): tinted with the link color via a mask */
+.icon-scix {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.125em;
+    background-color: currentColor;
+    -webkit-mask: url(scix.svg) center / contain no-repeat;
+    mask: url(scix.svg) center / contain no-repeat;
+}
+
 /* Dark mode styles */
 @media (prefers-color-scheme: dark) {
     body {
