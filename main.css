@@ -38,24 +38,21 @@ a:hover {
     list-style-type: none;
     font-size: xx-large;
     padding: 0;
-    display: flex;
-    flex-wrap: wrap; /* Allow wrapping */
-    justify-content: space-evenly; /* Even spacing between icons */
-    width: 80%;
-    max-width: 320px;
     margin: 1em auto;
-    gap: 1em; /* Add spacing between rows */
+    display: grid;
+    grid-template-columns: repeat(3, 42px); /* 3 icons per row */
+    justify-content: center;
+    gap: 1em 1.5em; /* row, column */
 }
 
 .icons li {
-    display: inline-flex;
-    width: 42px;
+    display: flex;
     justify-content: center;
 }
 
-.icons li {
-    display: inline;
-    width: 42px;
+/* Center a last icon that sits alone on its row */
+.icons li:last-child:nth-child(3n+1) {
+    grid-column: 2;
 }
 
 .icons a {
