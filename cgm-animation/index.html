@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quasar Sightline Animation</title>
+    <meta name="description" content="A quasar's light crossing the gas around fourteen galaxies, and the absorption spectrum it accumulates." />
+    <meta property="og:image" content="cgm_animation_poster.png" />
+    <link rel="icon" type="image/png" href="../favicon.png" sizes="32x32" />
+    <style>
+      :root { --bg: #ffffff; --fg: #1f1f1f; --muted: #5a5a5a; --card: #ffffff; --rule: #d9d9d9; --link: #2f5f9e; }
+      @media (prefers-color-scheme: dark) {
+        :root { --bg: #16181c; --fg: #e8e8e8; --muted: #a9a9a9; --card: #ffffff; --rule: #3a3d44; --link: #8db4ea; }
+      }
+      body { margin: 0; background: var(--bg); color: var(--fg);
+             font: 17px/1.55 "Times New Roman", Times, serif; }
+      main { max-width: 1100px; margin: 0 auto; padding: 28px 16px 40px; }
+      h1 { font-size: 1.45rem; font-weight: 600; margin: 0 0 4px; }
+      .byline { color: var(--muted); margin: 0 0 18px; font-size: 0.95rem; }
+      figure { margin: 0; }
+      .frame { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 6px; }
+      video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: #fff; }
+      figcaption { margin-top: 12px; font-size: 0.98rem; }
+      a { color: var(--link); }
+      .dl { color: var(--muted); font-size: 0.9rem; margin-top: 10px; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Following a quasar's light through the cosmic web</h1>
+      <p class="byline"><a href="../">Nishant Mishra</a>, Department of Astronomy, University of Michigan</p>
+      <figure>
+        <div class="frame">
+          <video poster="cgm_animation_poster.png" width="3840" height="2160"
+                 autoplay muted loop playsinline controls preload="auto"
+                 aria-label="Animation: light from a background quasar travels left to right past fourteen galaxies at decreasing redshift. Each time it crosses a galaxy's surrounding gas or an intergalactic cloud, new absorption lines appear in the spectrum below, which becomes a dense forest of overlapping lines.">
+            <!-- small screens get the 1080p copy; browsers that ignore "media" also take it (the lighter one) -->
+            <source src="cgm_animation_1080p.mp4" type="video/mp4" media="(max-width: 1200px)" />
+            <source src="cgm_animation.mp4" type="video/mp4" />
+            <a href="cgm_animation.mp4">Download the animation (MP4)</a>
+          </video>
+        </div>
+        <figcaption>
+          Light from a background quasar at redshift <i>z</i> = 0.55 crosses the gas around fourteen foreground
+          galaxies, and many faint intergalactic clouds, on its way to the Hubble Space Telescope. Each crossing
+          imprints absorption lines at that gas's own redshift, so the same atomic transitions from different
+          galaxies land at different observed wavelengths. The spectrum grows from a clean quasar continuum into
+          a dense forest of overlapping lines, and every line must be assigned to the right galaxy and redshift
+          before the gas can be measured.
+        </figcaption>
+      </figure>
+      <p class="dl"><a href="cgm_animation.mp4" download>Download the 4K video (MP4)</a></p>
+    </main>
+  </body>
+</html>
