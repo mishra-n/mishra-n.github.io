@@ -34,25 +34,24 @@ a:hover {
     width: 150px;
 }
 
+/* Icons wrap in centred rows: at most six per row on wide screens (6 + 5 for the
+   current eleven), fewer on narrow screens, every row centred */
 .icons {
     list-style-type: none;
     font-size: xx-large;
     padding: 0;
     margin: 1em auto;
-    display: grid;
-    grid-template-columns: repeat(3, 42px); /* 3 icons per row */
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 1em 1.5em; /* row, column */
+    gap: 0.75em 1em; /* row, column */
+    max-width: calc(6 * 1.2em + 5 * 1em);
 }
 
 .icons li {
     display: flex;
     justify-content: center;
-}
-
-/* Center a last icon that sits alone on its row */
-.icons li:last-child:nth-child(3n+1) {
-    grid-column: 2;
+    width: 1.2em;
 }
 
 .icons a {
